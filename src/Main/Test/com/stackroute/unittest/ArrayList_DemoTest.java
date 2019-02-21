@@ -22,13 +22,25 @@ public class ArrayList_DemoTest {
     @Test
     public void listOfFruits() {
         String expected = "[Kiwi, Grape, Mango, Berry]";
-        String actual = arrayList_demo.listOfFruits(new String[]{"Apple","Grape", "Melon", "Berry"});
+        String actual = arrayList_demo.listOfFruits(new String[]{"Apple","Grape", "Melon", "Berry"},"Kiwi","Mango");
         assertEquals(expected,actual);
     }
     @Test
     public void RemovelistOfFruits() {
         String expected = "[]";
-        String actual = arrayList_demo.removeListOfFruits(new String[]{"Apple","Grape", "Melon", "Berry"});
+        String actual = arrayList_demo.removeListOfFruits(new String[]{"Apple","Grape", "Melon", "Berry"},"Kiwi","Mango");
+        assertEquals(expected,actual);
+    }
+    @Test
+    public void IslistOfFruits() {
+        String expected = "[Grapes, Watermelon, Mausami, Lichi]";
+        String actual = arrayList_demo.listOfFruits(new String[]{"Banana","Watermelon", "orange", "Lichi"},"Grapes","Mausami");
+        assertEquals(expected,actual);
+    }
+    @Test
+    public void IsremovelistOfFruits() {
+        String expected = "[]";
+        String actual = arrayList_demo.removeListOfFruits(new String[]{"Banana","Watermelon", "orange", "Lichi"},"Grapes","Mausami");
         assertEquals(expected,actual);
     }
 }
